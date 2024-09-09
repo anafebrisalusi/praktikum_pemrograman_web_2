@@ -23,7 +23,7 @@ OOP (Object-Oriented Programming) adalah paradigma pemrograman yang berfokus pad
 ## Prinsip OOP
 * Encapsulation : Menyembunyikan detail implementasi dan hanya memberikan
 akses melalui metode tertentu
-  ![Screenshot 2024-09-10 063712](https://github.com/user-attachments/assets/5c653b8c-bff8-42a8-8339-583d4806f721)
+  ![Screenshot 2024-09-10 064002](https://github.com/user-attachments/assets/f9ff6ede-a18b-4604-85b8-9143beaf988c)
 
 * Inheritance: Kelas dapat mewarisi properti dan metode dari kelas lain.
 * Polymorphism: Metode yang sama dapat memiliki implementasi berbeda
