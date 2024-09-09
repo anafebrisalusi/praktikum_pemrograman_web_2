@@ -9,4 +9,14 @@
 (methods)
 
   ![Screenshot 2024-09-10 060709](https://github.com/user-attachments/assets/0f945e2c-562d-4885-abcd-22056283678d)
-  * Atribut : Data atau properti yang dimiliki oleh suatu objek.
+* Atribut : Data atau properti yang dimiliki oleh suatu objek.
+  
+    ![Screenshot 2024-09-10 061234](https://github.com/user-attachments/assets/124d3ca3-49ae-46f2-92e6-5bc7775ea1fb)
+
+   Jenis-jenis atribut
+  * privat : hanya bisa diakses oleh class pembuat atribut
+  * public : bisa diakses oleh luar class
+  * protected : bisa diakses oleh class pembuat atau keturunan/warisan, tetapi tidak di luar class
+ 
+* Methode : Metode adalah fungsi atau aksi yang bisa dilakukan oleh objek
+    
