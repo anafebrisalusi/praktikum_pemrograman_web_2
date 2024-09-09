@@ -1,6 +1,6 @@
 # Mengidentifikasi dan Menjelaskan Prinsip Dasar OOP
 ## Pendahuluan
-* OOP (Object-Oriented Programming) adalah paradigma pemrograman yang berfokus pada konsep objek.
+OOP (Object-Oriented Programming) adalah paradigma pemrograman yang berfokus pada konsep objek.
 ## Konsep Dasar OOP
 * Class : Blueprint atau template untuk menciptakan objek
 
@@ -19,4 +19,13 @@
   * protected : bisa diakses oleh class pembuat atau keturunan/warisan, tetapi tidak di luar class
  
 * Methode : Metode adalah fungsi atau aksi yang bisa dilakukan oleh objek
-    
+    ![Screenshot 2024-09-10 062007](https://github.com/user-attachments/assets/b7519db7-f976-4b36-805f-a15a60d31144)
+## Prinsip OOP
+* Encapsulation : Menyembunyikan detail implementasi dan hanya memberikan
+akses melalui metode tertentu
+
+* Inheritance: Kelas dapat mewarisi properti dan metode dari kelas lain.
+* Polymorphism: Metode yang sama dapat memiliki implementasi berbeda
+dalam class yang berbeda.
+* Abstraction: Menyembunyikan detail implementasi dan hanya menampilkan
+fungsi penting.
