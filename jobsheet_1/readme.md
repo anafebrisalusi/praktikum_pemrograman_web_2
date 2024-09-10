@@ -39,6 +39,11 @@
      menggunakan metode ini untuk mengakses data dari luar kelas.
    - Metode setter digunakan untuk mengubah atau memperbarui nilai dari atribut $nama, $nim, dan $jurusan.
      Metode ini juga perlu digunakan karena atributnya privat, jadi kita tidak bisa langsung mengubahnya dari luar kelas. Melalui metode      setMahasiswa(), kita bisa mengubah data mahasiswa dengan memasukkan nilai baru untuk nama, NIM, dan jurusan.
+
+     Outputnya adalah sebagai berikut:
+
+     ![Screenshot 2024-09-10 213411](https://github.com/user-attachments/assets/bda0d955-837e-4cbb-a79b-19cd026cc4c2)
+
      
 3. Inheritance
  * Buat class Pengguna dengan atribut nama dan metode getNama().
@@ -47,6 +52,15 @@
    ![Screenshot 2024-09-10 074008](https://github.com/user-attachments/assets/ae379525-4b1c-4c8a-8f62-a65c262170b2)
    ![image](https://github.com/user-attachments/assets/ff2e6a04-b0b9-494a-a52b-0959ee55b046)
 
+   Penjelasan
+   - Dosen adalah kelas turunan dari Pengguna, jadi otomatis mewarisi atribut dan metode dari kelas Pengguna.
+    Di kelas Dosen, ada tambahan atribut privat $mataKuliah.
+   - Constructor di kelas Dosen menggunakan parent::__construct($nama) untuk memanggil constructor dari kelas induk (Pengguna), lalu menginisialisasi mataKuliah.
+   - Metode tampilkanData() menampilkan nama dosen dan mata kuliah yang diajarkan.
+  
+     Outputnya adalah sebagai berikut:
+     
+
 4. Polymorphism
  * Buat class Pengguna dengan metode aksesFitur().
  * Implementasikan aksesFitur() dengan cara berbeda di class Dosen dan
@@ -54,6 +68,16 @@
  * Instansiasi objek dari class Dosen dan Mahasiswa, lalu panggil metode aksesFitur().
    ![Screenshot 2024-09-10 074632](https://github.com/user-attachments/assets/db066337-a268-4309-aa21-4cc858cb36f3)
    ![Screenshot 2024-09-10 074656](https://github.com/user-attachments/assets/ff33d458-6d84-410f-9af0-b03292f7a276)
+
+   Penjelasan
+   - Kelas Pengguna punya atribut nama dan metode aksesFitur(), yang pada dasarnya hanya menampilkan nama pengguna.
+   - Kelas Dosen adalah turunan dari Pengguna dan menambahkan atribut baru mataKuliah.
+   - Metode aksesFitur() di-override sehingga menampilkan nama dosen dan mata kuliah yang diajarkan.
+   - Kelas Mahasiswa juga turunan dari Pengguna, tetapi memiliki atribut tambahan yaitu nim dan jurusan.
+Seperti pada kelas Dosen, metode aksesFitur() di-override untuk menampilkan nama mahasiswa, NIM, dan jurusan.
+   - Instansiasi Objek:
+     Membuat dua objek, satu dari kelas Dosen dan satu dari kelas Mahasiswa.
+Kemudian kita memanggil metode aksesFitur() untuk masing-masing objek, yang akan menampilkan informasi sesuai dengan peran masing-masing.
 
 5. Abstraction
  * Buat class abstrak Pengguna dengan metode abstrak aksesFitur().
