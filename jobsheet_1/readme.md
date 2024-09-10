@@ -25,5 +25,12 @@
  * Implementasikan aksesFitur() dengan cara berbeda di class Dosen dan
    Mahasiswa.
  * Instansiasi objek dari class Dosen dan Mahasiswa, lalu panggil metode aksesFitur().
+   ![Screenshot 2024-09-10 074632](https://github.com/user-attachments/assets/db066337-a268-4309-aa21-4cc858cb36f3)
+   ![Screenshot 2024-09-10 074656](https://github.com/user-attachments/assets/ff33d458-6d84-410f-9af0-b03292f7a276)
+
+5. Abstraction
+ * Buat class abstrak Pengguna dengan metode abstrak aksesFitur().
+ * Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
+ * Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang diinstansiasi.
 
 
