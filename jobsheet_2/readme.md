@@ -4,4 +4,5 @@
 2. Buat metode tampilkanDosen() untuk menampilkan informasi dosen.
    ![Screenshot 2024-09-10 100418](https://github.com/user-attachments/assets/611a42dc-fcf7-4f78-9418-a2dad72d693d)
 3. Buat objek dari kelas Dosen, dan gunakan metode tampilkanDosen() untuk menampilkan informasi tersebut.
-   
+   ![Screenshot 2024-09-10 100736](https://github.com/user-attachments/assets/852eb15e-0710-44b9-924d-b8a758129e6b)
+Outputnya adalah sebagai berikut
