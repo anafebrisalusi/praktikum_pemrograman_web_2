@@ -49,8 +49,7 @@
  * Buat class Pengguna dengan atribut nama dan metode getNama().
  * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
  * Instansiasi objek dari class Dosen dan tampilkan data dosen.
-   ![Screenshot 2024-09-10 074008](https://github.com/user-attachments/assets/ae379525-4b1c-4c8a-8f62-a65c262170b2)
-   ![image](https://github.com/user-attachments/assets/ff2e6a04-b0b9-494a-a52b-0959ee55b046)
+   ![Screenshot 2024-09-11 053317](https://github.com/user-attachments/assets/6a7f2a79-1679-4df2-9c74-3830d9689cd0)
 
    Penjelasan
    - Dosen adalah kelas turunan dari Pengguna, jadi otomatis mewarisi atribut dan metode dari kelas Pengguna.
@@ -149,6 +148,7 @@ Outputnya adalah sebagai berikut:
  * Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang diinstansiasi.
    ![Screenshot 2024-09-10 074945](https://github.com/user-attachments/assets/b9f83bbb-ef40-4b8f-a7ea-8745d8b1b259)
    ![Screenshot 2024-09-10 075015](https://github.com/user-attachments/assets/2c36b370-2132-4915-99b2-fb64af11f1fb)
+   
 
    Penjelasan
 
