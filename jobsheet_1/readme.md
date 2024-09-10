@@ -35,7 +35,7 @@
      menggunakan metode ini untuk mengakses data dari luar kelas.
    - Metode setter digunakan untuk mengubah atau memperbarui nilai dari atribut $nama, $nim, dan $jurusan.
      Metode ini juga perlu digunakan karena atributnya privat, jadi kita tidak bisa langsung mengubahnya dari luar kelas. Melalui metode      setMahasiswa(), kita bisa mengubah data mahasiswa dengan memasukkan nilai baru untuk nama, NIM, dan jurusan.
-   - 
+     
 3. Inheritance
  * Buat class Pengguna dengan atribut nama dan metode getNama().
  * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
