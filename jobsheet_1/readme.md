@@ -9,7 +9,12 @@
 2. Encapsulation
  * Ubah atribut dalam class Mahasiswa menjadi private.
  * Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
- * Demonstrasikan akses ke atribut menggunakan metode getter dan setter
+ * Demonstrasikan akses ke atribut menggunakan metode getter dan setter.
    ![Screenshot 2024-09-10 073255](https://github.com/user-attachments/assets/76c29dea-693a-4297-ab77-90f0598faa96)
+   ![Screenshot 2024-09-10 073441](https://github.com/user-attachments/assets/bf4b8d3f-83d9-48e9-9100-9f216ecc5ee5)
 
+3. Inheritance
+ * Buat class Pengguna dengan atribut nama dan metode getNama().
+ * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
+ * Instansiasi objek dari class Dosen dan tampilkan data dosen.
    
