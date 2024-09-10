@@ -1,1 +1,4 @@
-# praktikum_pemrograman_web_2
+# Tentang Saya
+Nama   : Ana Febri Salusi
+Kelas  : TI-2B
+NPM    : 230202027
