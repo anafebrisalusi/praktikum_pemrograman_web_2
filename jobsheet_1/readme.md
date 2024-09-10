@@ -32,5 +32,6 @@
  * Buat class abstrak Pengguna dengan metode abstrak aksesFitur().
  * Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
  * Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang diinstansiasi.
-
+   ![Screenshot 2024-09-10 074945](https://github.com/user-attachments/assets/b9f83bbb-ef40-4b8f-a7ea-8745d8b1b259)
+   ![Screenshot 2024-09-10 075015](https://github.com/user-attachments/assets/2c36b370-2132-4915-99b2-fb64af11f1fb)
 
