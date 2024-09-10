@@ -1,13 +1,13 @@
 # Tugas
 
-### 1. Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa.
+### Mengimplementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa.
   ![Screenshot 2024-09-10 193658](https://github.com/user-attachments/assets/8787575f-2645-4804-8fa9-958323837a10)
 
 Penjelasan 
 - Person adalah kelas induk yang mendefinisikan atribut name dan memiliki metode getName().
 - Kelas ini memiliki konstruktor (__construct()) yang menerima parameter name dan menyimpan nilainya dalam atribut $name.
 - Metode getName() digunakan untuk mengembalikan nilai dari atribut name.
-### 2. Gunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya.
+#### Mengggunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya. Kemudian menggunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di kelas Mahasiswa. Menerapkan Polymorphism dengan membuat metode getRole() di kelas Person dan override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang berbeda. 
   ![Screenshot 2024-09-10 194748](https://github.com/user-attachments/assets/890c6627-ddae-4545-816b-e1861f16abd1)
 
   Penjelasan
@@ -24,11 +24,7 @@ Penjelasan
   pribadi $nim, dan metode getter dan setter.
 - Menggunakan metode getRole() untuk mengembalikan nilai "Mahasiswa", yang 
   menunjukkan penggunaan polymorphism.
-  
-### 3. Terapkan Polymorphism dengan membuat metode getRole() di kelas Person dan override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang berbeda. 
-Polymorphism memungkinkan metode yang sama (yaitu getRole()) untuk berperilaku berbeda di setiap subclass. Dalam kelas Dosen dan Mahasiswa, metode getRole() mengembalikan peran masing-masing ("Dosen" untuk dosen dan "Mahasiswa" untuk mahasiswa).
-### 4. Gunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di kelas Mahasiswa.
-### 5. Buat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing memiliki cara tersendiri untuk mengelola pengajuan jurnal.
+### Membuat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing memiliki cara tersendiri untuk mengelola pengajuan jurnal.
   ![Screenshot 2024-09-10 202255](https://github.com/user-attachments/assets/64d658cd-d431-46d9-bf08-96c534fa4758)
   Penjelasan 
 - Jurnal adalah kelas abstrak, artinya tidak dapat diinstansiasi secara langsung. Kelas ini hanya digunakan sebagai dasar untuk subclass 
@@ -37,7 +33,7 @@ Polymorphism memungkinkan metode yang sama (yaitu getRole()) untuk berperilaku b
 - Class Dosen Kelas ini adalah turunan dari Jurnal dan mengimplementasikan metode submit() untuk menampilkan pesan bahwa jurnal dosen telah diajukan.
 - JurnalMahasiswa Serupa dengan JurnalDosen, tetapi implementasi submit() menampilkan pesan untuk jurnal mahasiswa.
 
-  ### Instanisasi
+  ### Instanisiasi
   ![Screenshot 2024-09-10 202309](https://github.com/user-attachments/assets/dd169d04-e159-4140-98a0-27cea1c2d369)
 
   ### Output
