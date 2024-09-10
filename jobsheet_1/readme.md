@@ -18,4 +18,12 @@
  * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
  * Instansiasi objek dari class Dosen dan tampilkan data dosen.
    ![Screenshot 2024-09-10 074008](https://github.com/user-attachments/assets/ae379525-4b1c-4c8a-8f62-a65c262170b2)
+   ![image](https://github.com/user-attachments/assets/ff2e6a04-b0b9-494a-a52b-0959ee55b046)
+
+4. Polymorphism
+ * Buat class Pengguna dengan metode aksesFitur().
+ * Implementasikan aksesFitur() dengan cara berbeda di class Dosen dan
+   Mahasiswa.
+ * Instansiasi objek dari class Dosen dan Mahasiswa, lalu panggil metode aksesFitur().
+
 
