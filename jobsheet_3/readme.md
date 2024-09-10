@@ -20,6 +20,7 @@ Penjelasan
   ![Screenshot 2024-09-10 194805](https://github.com/user-attachments/assets/ffae2b56-80b9-401e-a420-23edc4cc50b9)
 
   Penjelasan
+  
 - Mirip dengan Dosen, kelas ini juga adalah subclass dari Person dengan atribut 
   pribadi $nim, dan metode getter dan setter.
 - Menggunakan metode getRole() untuk mengembalikan nilai "Mahasiswa", yang 
@@ -28,6 +29,7 @@ Penjelasan
   ![Screenshot 2024-09-10 202255](https://github.com/user-attachments/assets/64d658cd-d431-46d9-bf08-96c534fa4758)
   
   Penjelasan 
+  
 - Jurnal adalah kelas abstrak, artinya tidak dapat diinstansiasi secara langsung. Kelas ini hanya digunakan sebagai dasar untuk subclass 
   lainnya (JurnalDosen dan JurnalMahasiswa).
 - Kelas ini memiliki satu metode abstrak submit() yang harus diimplementasikan oleh setiap subclass.
