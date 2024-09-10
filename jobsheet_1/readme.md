@@ -21,6 +21,10 @@
       Jurusan: "Jurusan Komputer dan Bisnis".
       Setelah objek terbentuk, kita memanggil metode tampilkanData() untuk menampilkan informasi yang telah dimasukkan.
 
+      Outputnya adalah sebagai berikut:
+      
+      ![Screenshot 2024-09-10 213215](https://github.com/user-attachments/assets/5c4a309d-23e8-43af-a2a4-220ba73bfaae)
+
 2. Encapsulation
  * Ubah atribut dalam class Mahasiswa menjadi private.
  * Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
