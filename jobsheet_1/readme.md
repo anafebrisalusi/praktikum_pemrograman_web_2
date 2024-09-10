@@ -59,7 +59,9 @@
    - Metode tampilkanData() menampilkan nama dosen dan mata kuliah yang diajarkan.
   
      Outputnya adalah sebagai berikut:
-     
+
+     ![Screenshot 2024-09-10 215234](https://github.com/user-attachments/assets/769a582a-6827-418e-bf0a-5a991de850ae)
+
 
 4. Polymorphism
  * Buat class Pengguna dengan metode aksesFitur().
@@ -79,6 +81,10 @@ Seperti pada kelas Dosen, metode aksesFitur() di-override untuk menampilkan nama
      Membuat dua objek, satu dari kelas Dosen dan satu dari kelas Mahasiswa.
 Kemudian kita memanggil metode aksesFitur() untuk masing-masing objek, yang akan menampilkan informasi sesuai dengan peran masing-masing.
 
+Outputnya adalah sebagai berikut:
+
+![Screenshot 2024-09-10 215347](https://github.com/user-attachments/assets/ceddbdf1-209e-4971-8cf6-5fa342be9ba7)
+
 5. Abstraction
  * Buat class abstrak Pengguna dengan metode abstrak aksesFitur().
  * Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
@@ -86,3 +92,14 @@ Kemudian kita memanggil metode aksesFitur() untuk masing-masing objek, yang akan
    ![Screenshot 2024-09-10 074945](https://github.com/user-attachments/assets/b9f83bbb-ef40-4b8f-a7ea-8745d8b1b259)
    ![Screenshot 2024-09-10 075015](https://github.com/user-attachments/assets/2c36b370-2132-4915-99b2-fb64af11f1fb)
 
+   Penjelasan
+
+  - Kelas Pengguna adalah kelas yang tidak bisa dibuat objek langsung, karena metode aksesFitur() didefinisikan sebagai abstrak. Artinya, kelas turunan wajib mengimplementasikan metode ini.
+Kelas ini hanya punya atribut umum, yaitu nama, dan konstruktor untuk menginisialisasi atribut tersebut.
+  - Kelas Dosen adalah turunan dari kelas abstrak Pengguna dan menambahkan atribut khusus, yaitu mataKuliah.
+Kelas ini juga mengimplementasikan metode aksesFitur() untuk menampilkan data dosen, yaitu nama dan mata kuliah yang diajarkan.
+- Kelas Mahasiswa sama seperti Dosen, kelas ini juga merupakan turunan dari Pengguna, tetapi dengan atribut khusus nim dan jurusan.
+Kelas ini juga mengimplementasikan metode aksesFitur() untuk menampilkan data mahasiswa, termasuk NIM dan jurusan.
+ Outputnya adalah sebagai berikut:
+
+![Screenshot 2024-09-10 215359](https://github.com/user-attachments/assets/26083e25-8ba7-4f19-8d0c-2eaf20ed371e)
