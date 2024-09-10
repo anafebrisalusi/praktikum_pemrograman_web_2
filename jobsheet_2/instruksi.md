@@ -101,3 +101,7 @@ Penjelasan
 - Metode setNim():
 Mengubah nilai atribut nim menjadi nilai baru yang diberikan.
 Ini adalah metode setter yang memungkinkan perubahan NIM mahasiswa setelah objek dibuat.
+
+Outputnya adalah sebagai berikut:
+
+  ![Screenshot 2024-09-10 223427](https://github.com/user-attachments/assets/b004fdf8-231d-4020-9426-1df7fae32344)
