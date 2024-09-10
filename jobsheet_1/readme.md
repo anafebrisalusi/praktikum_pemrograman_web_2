@@ -6,6 +6,21 @@
   * Instansiasi objek dari class Mahasiswa dan tampilkan data mahasiswa tersebut.
     ![Screenshot 2024-09-10 072707](https://github.com/user-attachments/assets/591234da-a802-4e9d-8c0a-a96172ff7cee)
 
+    Penjelasan
+    - Membuat kelas yang disebut Mahasiswa. Di dalam kelas ini, ada tiga atribut atau data yang mewakili setiap mahasiswa,       yaitu:
+      $nama: Menyimpan nama mahasiswa.
+      $nim: Menyimpan NIM (Nomor Induk Mahasiswa).
+      $jurusan: Menyimpan jurusan tempat mahasiswa belajar.
+    - Constructor adalah fungsi khusus yang akan dijalankan otomatis saat kita membuat objek baru dari kelas Mahasiswa. Fungsinya untuk        mengisi data (nama, NIM, dan jurusan) saat objek mahasiswa baru dibuat.
+      Fungsi __construct($nama, $nim, $jurusan) menerima tiga parameter: nama mahasiswa, NIM, dan jurusan, kemudian menyimpan nilainya         ke atribut objek menggunakan $this->.
+    - Metode tampilkanData() ini berfungsi untuk menampilkan data dari mahasiswa yang ada di atribut (nama, NIM, dan jurusan).
+      Metode ini mengembalikan informasi mahasiswa dalam format teks.
+    - Di sini kita membuat objek $mahasiswa dari kelas Mahasiswa. Untuk membuat objek ini, kita masukkan:
+      Nama: "Ana Febri Salusi"
+      NIM: "230202027"
+      Jurusan: "Jurusan Komputer dan Bisnis".
+      Setelah objek terbentuk, kita memanggil metode tampilkanData() untuk menampilkan informasi yang telah dimasukkan.
+
 2. Encapsulation
  * Ubah atribut dalam class Mahasiswa menjadi private.
  * Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
