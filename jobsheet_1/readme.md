@@ -17,4 +17,5 @@
  * Buat class Pengguna dengan atribut nama dan metode getNama().
  * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
  * Instansiasi objek dari class Dosen dan tampilkan data dosen.
-   
+   ![Screenshot 2024-09-10 074008](https://github.com/user-attachments/assets/ae379525-4b1c-4c8a-8f62-a65c262170b2)
+
