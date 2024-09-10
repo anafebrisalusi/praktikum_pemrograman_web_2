@@ -33,7 +33,16 @@ Di sini, __construct() adalah constructor dari kelas Mahasiswa. Ia menginisialis
 - Buat metode updateJurusan() dalam kelas Mahasiswa yang memungkinkan
 perubahan jurusan.
 - Gunakan metode ini untuk mengubah jurusan dari objek yang sudah dibuat.
+  ![Screenshot 2024-09-10 222433](https://github.com/user-attachments/assets/02e99435-e9a6-4a1a-b102-d04c06d8a7c2)
+
+  Penjelasan
+  - Metode updateJurusan digunakan untuk memperbarui nilai dari atribut jurusan.
+Mengambil parameter $jurusan_baru dan mengubah nilai jurusan menjadi nilai baru yang diberikan.
+    
+  Outputnya adalah sebagai berikut:
   
+  ![Screenshot 2024-09-10 222446](https://github.com/user-attachments/assets/b4de1531-6b09-42f7-8106-6c8259c6a215)
+
 4. Penggunaan Atribut dan Metode
 - Ubah nilai atribut nim dari objek Mahasiswa menggunakan metode setter.
 - Tampilkan data mahasiswa yang sudah diperbarui dengan memanggil metode
