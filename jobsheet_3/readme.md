@@ -26,6 +26,7 @@ Penjelasan
   menunjukkan penggunaan polymorphism.
 ### Membuat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing memiliki cara tersendiri untuk mengelola pengajuan jurnal.
   ![Screenshot 2024-09-10 202255](https://github.com/user-attachments/assets/64d658cd-d431-46d9-bf08-96c534fa4758)
+  
   Penjelasan 
 - Jurnal adalah kelas abstrak, artinya tidak dapat diinstansiasi secara langsung. Kelas ini hanya digunakan sebagai dasar untuk subclass 
   lainnya (JurnalDosen dan JurnalMahasiswa).
