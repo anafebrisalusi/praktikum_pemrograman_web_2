@@ -75,3 +75,6 @@ echo $buku1->tampilkanInfo();
 ```
 
 Aksebilitas
+- privat : hanya bisa diakses oleh class pembuat atribut
+- public : bisa diakses oleh luar class
+- protected : bisa diakses oleh class pembuat atau keturunan/warisan, tetapi tidak di luar class
