@@ -28,6 +28,14 @@
    ![Screenshot 2024-09-10 073255](https://github.com/user-attachments/assets/76c29dea-693a-4297-ab77-90f0598faa96)
    ![Screenshot 2024-09-10 073441](https://github.com/user-attachments/assets/bf4b8d3f-83d9-48e9-9100-9f216ecc5ee5)
 
+   Penjelasan
+   - Atribut di dalam kelas ini adalah $nama, $nim, dan $jurusan. Mereka dibuat dengan akses privat menggunakan private. Artinya,      
+     atribut ini tidak bisa diakses langsung dari luar kelas.
+   - Metode getter digunakan untuk mengambil data mahasiswa (nama, NIM, dan jurusan). Karena atribut bersifat privat, kita harus    
+     menggunakan metode ini untuk mengakses data dari luar kelas.
+   - Metode setter digunakan untuk mengubah atau memperbarui nilai dari atribut $nama, $nim, dan $jurusan.
+     Metode ini juga perlu digunakan karena atributnya privat, jadi kita tidak bisa langsung mengubahnya dari luar kelas. Melalui metode      setMahasiswa(), kita bisa mengubah data mahasiswa dengan memasukkan nilai baru untuk nama, NIM, dan jurusan.
+   - 
 3. Inheritance
  * Buat class Pengguna dengan atribut nama dan metode getNama().
  * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
