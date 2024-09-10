@@ -9,5 +9,7 @@
 2. Encapsulation
  * Ubah atribut dalam class Mahasiswa menjadi private.
  * Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
- * Demonstrasikan akses ke atribut menggunakan metode getter dan setter.
+ * Demonstrasikan akses ke atribut menggunakan metode getter dan setter
+   ![Screenshot 2024-09-10 073255](https://github.com/user-attachments/assets/76c29dea-693a-4297-ab77-90f0598faa96)
+
    
