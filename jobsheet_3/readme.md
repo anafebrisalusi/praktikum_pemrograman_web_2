@@ -29,3 +29,17 @@ Penjelasan
 Polymorphism memungkinkan metode yang sama (yaitu getRole()) untuk berperilaku berbeda di setiap subclass. Dalam kelas Dosen dan Mahasiswa, metode getRole() mengembalikan peran masing-masing ("Dosen" untuk dosen dan "Mahasiswa" untuk mahasiswa).
 ### 4. Gunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di kelas Mahasiswa.
 ### 5. Buat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing memiliki cara tersendiri untuk mengelola pengajuan jurnal.
+  ![Screenshot 2024-09-10 202255](https://github.com/user-attachments/assets/64d658cd-d431-46d9-bf08-96c534fa4758)
+  Penjelasan 
+- Jurnal adalah kelas abstrak, artinya tidak dapat diinstansiasi secara langsung. Kelas ini hanya digunakan sebagai dasar untuk subclass 
+  lainnya (JurnalDosen dan JurnalMahasiswa).
+- Kelas ini memiliki satu metode abstrak submit() yang harus diimplementasikan oleh setiap subclass.
+- Class Dosen Kelas ini adalah turunan dari Jurnal dan mengimplementasikan metode submit() untuk menampilkan pesan bahwa jurnal dosen telah diajukan.
+- JurnalMahasiswa Serupa dengan JurnalDosen, tetapi implementasi submit() menampilkan pesan untuk jurnal mahasiswa.
+
+  ### Instanisasi
+  ![Screenshot 2024-09-10 202309](https://github.com/user-attachments/assets/dd169d04-e159-4140-98a0-27cea1c2d369)
+
+  ### Output
+  ![Screenshot 2024-09-10 202324](https://github.com/user-attachments/assets/7752dffc-1619-43e7-9476-734eea08dedd)
+
