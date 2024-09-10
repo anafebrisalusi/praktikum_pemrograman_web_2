@@ -29,9 +29,8 @@
  * Ubah atribut dalam class Mahasiswa menjadi private.
  * Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
  * Demonstrasikan akses ke atribut menggunakan metode getter dan setter.
-   
-   ![Screenshot 2024-09-10 073255](https://github.com/user-attachments/assets/76c29dea-693a-4297-ab77-90f0598faa96)
-   ![Screenshot 2024-09-10 073441](https://github.com/user-attachments/assets/bf4b8d3f-83d9-48e9-9100-9f216ecc5ee5)
+
+   ![Screenshot 2024-09-11 053035](https://github.com/user-attachments/assets/88e125bd-c1a4-42ad-b4e3-79b5b2c52e9d)
 
    Penjelasan
    - Atribut di dalam kelas ini adalah $nama, $nim, dan $jurusan. Mereka dibuat dengan akses privat menggunakan private. Artinya,      
