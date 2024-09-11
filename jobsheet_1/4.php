@@ -1,14 +1,8 @@
 <?php
 // 4. Polymorphism
-
 // Membuat class Pengguna
 class Pengguna {
     public $nama;
-
-    // Constructor (Menginisialisasi class yang baru)
-    public function __construct($nama) {
-        $this->nama = $nama;
-    }
 
     // Metode aksesFitur() umum untuk Pengguna
     public function aksesFitur() {
@@ -18,12 +12,7 @@ class Pengguna {
 
 // Membuat class Dosen yang mewarisi class Pengguna
 class Dosen extends Pengguna {
-    private $mataKuliah;
-
-    public function __construct($nama, $mataKuliah) {
-        parent::__construct($nama); // Memanggil constructor dari class Pengguna
-        $this->mataKuliah = $mataKuliah;
-    }
+    public $mataKuliah;
 
     // aksesFitur() untuk Dosen
     public function aksesFitur() {
@@ -33,13 +22,8 @@ class Dosen extends Pengguna {
 
 // Membuat class Mahasiswa yang mewarisi class Pengguna
 class Mahasiswa extends Pengguna {
-    private $jurusan;
-
-    public function __construct($nama, $nim, $jurusan) {
-        parent::__construct($nama); // Memanggil constructor dari class Pengguna
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
+    public $nim;
+    public $jurusan;
 
     // aksesFitur() untuk Mahasiswa
     public function aksesFitur() {
@@ -48,11 +32,17 @@ class Mahasiswa extends Pengguna {
 }
 
 // Instansiasi objek dari class Dosen dan Mahasiswa
-$dosen = new Dosen("Yana Aprilia ", "Filsafat ");
-$mahasiswa = new Mahasiswa("Ana Febri Salusi ", "230202027 ", "Teknik Informatika");
+$dosen = new Dosen();
+$dosen->nama = "Yana Aprilia";
+$dosen->mataKuliah = "Filsafat";
+
+$mahasiswa = new Mahasiswa();
+$mahasiswa->nama = "Ana Febri Salusi";
+$mahasiswa->nim = "230202027";
+$mahasiswa->jurusan = "Teknik Informatika";
 
 // Memanggil metode aksesFitur() dari masing-masing objek
 echo $dosen->aksesFitur() . "<br>";      // Output: Nama Dosen: Yana Aprilia, Mata Kuliah: Filsafat
-echo $mahasiswa->aksesFitur() . "<br>";  // Output: Nama Mahasiswa: Ana Febri Salusi, Jurusan: Teknik Informatika
+echo $mahasiswa->aksesFitur() . "<br>";  // Output: Nama Mahasiswa: Ana Febri Salusi, NIM: 230202027, Jurusan: Teknik Informatika
 
 ?>
