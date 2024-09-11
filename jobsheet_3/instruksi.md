@@ -25,12 +25,12 @@ getCourseDetails() untuk memberikan detail yang berbeda.
 class Person {
     public $name;
 
-    public function __construct($name) {
-        $this->name = $name;
-    }
-
     public function getName() {
         return $this->name;
+    }
+
+    public function setName($name) {
+        $this->name = $name;
     }
 }
 
@@ -38,38 +38,23 @@ class Person {
 class Student extends Person {
     private $studentID;
 
-    public function __construct($name, $studentID) {
-        parent::__construct($name);
-        $this->studentID = $studentID;
-    }
-
     public function getStudentID() {
         return $this->studentID;
+    }
+
+    public function setStudentID($studentID) {
+        $this->studentID = $studentID;
     }
 
     // Override metode getName()
     public function getName() {
         return "Student Name: " . $this->name;
     }
-
-    // Setter dan getter untuk name dan studentID
-    public function setName($name) {
-        $this->name = $name;
-    }
-
-    public function setStudentID($studentID) {
-        $this->studentID = $studentID;
-    }
 }
 
 // Polymorphism
 class Teacher extends Person {
     public $teacherID;
-
-    public function __construct($name, $teacherID) {
-        parent::__construct($name);
-        $this->teacherID = $teacherID;
-    }
 
     public function getTeacherID() {
         return $this->teacherID;
@@ -85,11 +70,11 @@ class Teacher extends Person {
 abstract class Course {
     protected $courseName;
 
-    public function __construct($courseName) {
+    abstract public function getCourseDetails();
+
+    public function setCourseName($courseName) {
         $this->courseName = $courseName;
     }
-
-    abstract public function getCourseDetails();
 }
 
 // Kelas OnlineCourse yang mengimplementasikan getCourseDetails()
@@ -107,13 +92,28 @@ class OfflineCourse extends Course {
 }
 
 // Contoh penggunaan
-$onlineCourse = new OnlineCourse("PHP Programming");
+$student = new Student();
+$student->setName("John Doe");
+$student->setStudentID("12345");
+echo $student->getName() . "<br>"; // Output: Student Name: John Doe
+echo "Student ID: " . $student->getStudentID() . "<br>"; // Output: Student ID: 12345
+
+$teacher = new Teacher();
+$teacher->setName("Jane Smith");
+$teacher->teacherID = "67890";
+echo $teacher->getName() . "<br>"; // Output: Teacher Name: Jane Smith
+echo "Teacher ID: " . $teacher->getTeacherID() . "<br>"; // Output: Teacher ID: 67890
+
+$onlineCourse = new OnlineCourse();
+$onlineCourse->setCourseName("PHP Programming");
 echo $onlineCourse->getCourseDetails() . "<br>"; // Output: Online Course: PHP Programming
 
-$offlineCourse = new OfflineCourse("Data Structures");
+$offlineCourse = new OfflineCourse();
+$offlineCourse->setCourseName("Data Structures");
 echo $offlineCourse->getCourseDetails(); // Output: Offline Course: Data Structures
 
 ?>
+
 
 ```
 
