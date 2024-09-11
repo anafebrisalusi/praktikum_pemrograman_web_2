@@ -1,29 +1,53 @@
 # Jobsheet 1 Implementasi Prinsip OOP dalam PHP
-
 1. Membuat Class dan Object
   * Buat class Mahasiswa yang memiliki atribut nama, nim, dan jurusan.
   * Buat metode tampilkanData() dalam class Mahasiswa.
   * Instansiasi objek dari class Mahasiswa dan tampilkan data mahasiswa tersebut.
-    ![Screenshot 2024-09-10 072707](https://github.com/user-attachments/assets/591234da-a802-4e9d-8c0a-a96172ff7cee)
+    
+```
+<?php
+//1. Membuat Class dan Object
+class Mahasiswa { 
+    // Atribut atau properties
+    public $nama;
+    public $nim;
+    public $jurusan;
 
-    Penjelasan
-    - Membuat kelas yang disebut Mahasiswa. Di dalam kelas ini, ada tiga atribut atau data yang mewakili setiap mahasiswa,       yaitu:
-      $nama: Menyimpan nama mahasiswa.
-      $nim: Menyimpan NIM (Nomor Induk Mahasiswa).
-      $jurusan: Menyimpan jurusan tempat mahasiswa belajar.
-    - Constructor adalah fungsi khusus yang akan dijalankan otomatis saat kita membuat objek baru dari kelas Mahasiswa. Fungsinya untuk        mengisi data (nama, NIM, dan jurusan) saat objek mahasiswa baru dibuat.
-      Fungsi __construct($nama, $nim, $jurusan) menerima tiga parameter: nama mahasiswa, NIM, dan jurusan, kemudian menyimpan nilainya         ke atribut objek menggunakan $this->.
-    - Metode tampilkanData() ini berfungsi untuk menampilkan data dari mahasiswa yang ada di atribut (nama, NIM, dan jurusan).
-      Metode ini mengembalikan informasi mahasiswa dalam format teks.
-    - Di sini kita membuat objek $mahasiswa dari kelas Mahasiswa. Untuk membuat objek ini, kita masukkan:
-      Nama: "Ana Febri Salusi"
-      NIM: "230202027"
-      Jurusan: "Jurusan Komputer dan Bisnis".
-      Setelah objek terbentuk, kita memanggil metode tampilkanData() untuk menampilkan informasi yang telah dimasukkan.
+    //Metode atau function
+     public function tampilkanData() {
+        return "Nama : $this->nama, NIM : $this->nim, Jurusan : $this->jurusan";
+     }
+}
 
-      Outputnya adalah sebagai berikut:
+// Instansiasi objek dari class Mahasiswa
+$mahasiswa1 = new Mahasiswa();
+
+// Menetapkan nilai untuk atribut nama, nim, dan jurusan
+$mahasiswa1->nama = "Ana Febri Salusi";
+$mahasiswa1->nim = "230202027";
+$mahasiswa1->jurusan = "Teknik Informatika";
+
+// Memanggil metode tampilkanData untuk menampilkan data mahasiswa
+echo $mahasiswa1->tampilkanData();
+
+
+
+?>
+
+```
+Penjelasan
+ * Class Mahasiswa:
+Ini adalah blueprint atau cetak biru yang mendefinisikan atribut dan fungsi dari mahasiswa.
+Atribut (atau properties) di dalamnya adalah nama, nim, dan jurusan.
+* Metode tampilkanData():
+ Fungsi ini digunakan untuk menampilkan data mahasiswa dalam format teks. Ini menggabungkan nilai atribut nama, nim, dan jurusan ke dalam satu string.
+* Instansiasi Objek:
+Kita membuat objek bernama $mahasiswa1 dari class Mahasiswa. Objek ini adalah representasi dari seorang mahasiswa dengan atribut nama, nim, dan jurusan.
+Setelah membuat objek, kita menetapkan nilai-nilai untuk atribut nama, nim, dan jurusan.
+
+* Outputnya adalah sebagai berikut:
       
-      ![Screenshot 2024-09-10 213215](https://github.com/user-attachments/assets/5c4a309d-23e8-43af-a2a4-220ba73bfaae)
+     
 
 2. Encapsulation
  * Ubah atribut dalam class Mahasiswa menjadi private.
