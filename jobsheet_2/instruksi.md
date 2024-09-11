@@ -2,7 +2,7 @@
 - Buat class Mahasiswa yang memiliki atribut nama, nim, dan jurusan.
 - Buat metode tampilkanData() dalam class Mahasiswa.
 - Instansiasi objek dari class Mahasiswa dan tampilkan data mahasiswa tersebut.
-  ![Screenshot 2024-09-10 221031](https://github.com/user-attachments/assets/f86d1199-977c-48e5-a966-e34850aacac3)
+ ![image](https://github.com/user-attachments/assets/205e02cd-701c-4b19-99cd-c97a2262c4c4)
 
 Penjelasan
   * Kelas adalah template atau cetak biru untuk membuat objek. Di sini, kita membuat kelas Mahasiswa.
