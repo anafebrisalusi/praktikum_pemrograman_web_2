@@ -47,22 +47,89 @@ Setelah membuat objek, kita menetapkan nilai-nilai untuk atribut nama, nim, dan 
 
 * Outputnya adalah sebagai berikut:
       
-     
+![Screenshot 2024-09-11 182755](https://github.com/user-attachments/assets/8ee9695e-e3cd-4657-8ac1-f47e9011b1f1)
+
 
 2. Encapsulation
  * Ubah atribut dalam class Mahasiswa menjadi private.
  * Buat metode getter dan setter untuk atribut nama, nim, dan jurusan.
  * Demonstrasikan akses ke atribut menggunakan metode getter dan setter.
 
-   ![Screenshot 2024-09-11 053035](https://github.com/user-attachments/assets/88e125bd-c1a4-42ad-b4e3-79b5b2c52e9d)
+```
+<?php
+// Membuat class Mahasiswa dengan atribut private
+class Mahasiswa {
+    // Atribut private
+    private $nama;
+    private $nim;
+    private $jurusan;
+
+    // Setter untuk atribut nama
+    public function setNama($nama) {
+        $this->nama = $nama;
+    }
+
+    // Getter untuk atribut nama
+    public function getNama() {
+        return $this->nama;
+    }
+
+    // Setter untuk atribut nim
+    public function setNim($nim) {
+        $this->nim = $nim;
+    }
+
+    // Getter untuk atribut nim
+    public function getNim() {
+        return $this->nim;
+    }
+
+    // Setter untuk atribut jurusan
+    public function setJurusan($jurusan) {
+        $this->jurusan = $jurusan;
+    }
+
+    // Getter untuk atribut jurusan
+    public function getJurusan() {
+        return $this->jurusan;
+    }
+
+    // Metode untuk menampilkan data mahasiswa
+    public function tampilkanData() {
+        return "Nama: " . $this->getNama() . "<br>" .
+               "NIM: " . $this->getNim() . "<br>" .
+               "Jurusan: " . $this->getJurusan() . "<br>";
+    }
+}
+
+// Instansiasi objek dari class Mahasiswa
+$mahasiswa1 = new Mahasiswa();
+
+// Menggunakan setter untuk mengisi nilai atribut
+$mahasiswa1->setNama("Ana Febri Salusi");
+$mahasiswa1->setNim("230202027");
+$mahasiswa1->setJurusan("Teknik Informatika");
+
+// Menampilkan data menggunakan metode tampilkanData()
+echo $mahasiswa1->tampilkanData();
+?>
+
+```
 
    Penjelasan
-   - Atribut di dalam kelas ini adalah $nama, $nim, dan $jurusan. Mereka dibuat dengan akses privat menggunakan private. Artinya,      
-     atribut ini tidak bisa diakses langsung dari luar kelas.
-   - Metode getter digunakan untuk mengambil data mahasiswa (nama, NIM, dan jurusan). Karena atribut bersifat privat, kita harus    
-     menggunakan metode ini untuk mengakses data dari luar kelas.
-   - Metode setter digunakan untuk mengubah atau memperbarui nilai dari atribut $nama, $nim, dan $jurusan.
-     Metode ini juga perlu digunakan karena atributnya privat, jadi kita tidak bisa langsung mengubahnya dari luar kelas. Melalui metode      setMahasiswa(), kita bisa mengubah data mahasiswa dengan memasukkan nilai baru untuk nama, NIM, dan jurusan.
+- Class Mahasiswa:
+Kita membuat sebuah class bernama Mahasiswa yang memiliki tiga atribut (variabel) yaitu nama, nim, dan jurusan. Ketiga atribut ini diatur sebagai private, artinya atribut tersebut hanya bisa diakses melalui metode yang ada di dalam class itu sendiri.
+- Setter dan Getter:
+Untuk bisa memberikan nilai dan mengambil nilai dari atribut nama, nim, dan jurusan, kita membuat setter dan getter. 
+Setter digunakan untuk mengatur atau memberikan nilai atribut.
+Getter digunakan untuk mengambil atau menampilkan nilai dari atribut tersebut.
+- Metode tampilkanData():
+Metode ini menggabungkan penggunaan getter untuk menampilkan data mahasiswa. Jadi, saat kita memanggil metode ini, ia akan menampilkan Nama, NIM, dan Jurusan mahasiswa.
+- Instansiasi Objek:
+Setelah class Mahasiswa dibuat, kita membuat objek dari class tersebut. Objek ini dinamai $mahasiswa1.
+Lalu, kita menggunakan metode setter untuk mengisi nilai atribut seperti nama, NIM, dan jurusan.
+- Menampilkan Data:
+Terakhir, kita memanggil metode tampilkanData() untuk menampilkan informasi mahasiswa yang sudah diisi menggunakan setter.
 
      Outputnya adalah sebagai berikut:
 
