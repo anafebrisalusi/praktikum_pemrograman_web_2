@@ -139,14 +139,48 @@ Terakhir, kita memanggil metode tampilkanData() untuk menampilkan informasi maha
  * Buat class Pengguna dengan atribut nama dan metode getNama().
  * Buat class Dosen yang mewarisi class Pengguna dan tambahkan atribut mataKuliah.
  * Instansiasi objek dari class Dosen dan tampilkan data dosen.
-   ![Screenshot 2024-09-11 053317](https://github.com/user-attachments/assets/6a7f2a79-1679-4df2-9c74-3830d9689cd0)
+```
+<?php
+// Class Pengguna
+class Pengguna {
+    public $nama;
 
+    public function getNama() {
+        return $this->nama;
+    }
+}
+
+// Class Dosen mewarisi Pengguna
+class Dosen extends Pengguna {
+    public $mataKuliah;
+
+    public function getDataDosen() {
+        return "Nama Dosen: " . $this->getNama() . ", Mata Kuliah: " . $this->mataKuliah;
+    }
+}
+
+// Instansiasi objek Dosen dan set atribut
+$dosen1 = new Dosen();
+$dosen1->nama = "Dr. Budi";
+$dosen1->mataKuliah = "Pemrograman PHP";
+
+// Tampilkan data dosen
+echo $dosen1->getDataDosen();
+?>
+```
    Penjelasan
-   - Dosen adalah kelas turunan dari Pengguna, jadi otomatis mewarisi atribut dan metode dari kelas Pengguna.
-    Di kelas Dosen, ada tambahan atribut privat $mataKuliah.
-   - Constructor di kelas Dosen menggunakan parent::__construct($nama) untuk memanggil constructor dari kelas induk (Pengguna), lalu menginisialisasi mataKuliah.
-   - Metode tampilkanData() menampilkan nama dosen dan mata kuliah yang diajarkan.
-  
+a. Kelas Pengguna:
+- Atribut nama: Ini adalah variabel publik yang menyimpan nama pengguna.
+- Metode getNama(): Metode ini mengembalikan nilai dari atribut nama. Dengan kata lain, metode ini digunakan untuk mengambil nama pengguna.
+b. Kelas Dosen:
+- Pewarisan: Kelas Dosen mewarisi dari kelas Pengguna dengan menggunakan keyword extends. Ini berarti bahwa kelas Dosen akan memiliki semua atribut dan metode dari kelas Pengguna.
+- Atribut mataKuliah: Ini adalah variabel publik baru yang ditambahkan di kelas Dosen untuk menyimpan informasi tentang mata kuliah yang diajarkan oleh dosen.
+c. Metode getDataDosen(): Metode ini mengembalikan string yang berisi nama dosen (menggunakan metode getNama() dari kelas Pengguna) dan mata kuliah yang diajarkan.
+d. Instansiasi dan Penggunaan:
+- Membuat Objek Dosen: new Dosen() membuat objek baru dari kelas Dosen.
+Menetapkan Atribut:
+$dosen1->nama = "Dr. Budi"; menetapkan nama dosen ke "Dr. Budi".
+$dosen1->mataKuliah = "Pemrograman PHP"; menetapkan mata kuliah yang diajarkan dosen ke "Pemrograman PHP".
      Outputnya adalah sebagai berikut:
 
      ![Screenshot 2024-09-10 215234](https://github.com/user-attachments/assets/769a582a-6827-418e-bf0a-5a991de850ae)
