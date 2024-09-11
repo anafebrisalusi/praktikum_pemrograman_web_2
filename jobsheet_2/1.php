@@ -17,7 +17,7 @@ class Mahasiswa {
     }
 }
 
-// Instansiasi objek tanpa constructor
+// Instansiasi objek 
 $mahasiswa1 = new Mahasiswa();
 
 // Mengisi data secara manual
