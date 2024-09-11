@@ -1,43 +1,171 @@
 # Tugas
+Buat proyek PHP dengan studi kasus sebagai berikut: 
+1. Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa. 
+2. Gunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan 
+Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya. 
+3. Terapkan Polymorphism dengan membuat metode getRole() di kelas Person dan 
+override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang 
+berbeda. 
+4. Gunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di 
+kelas Mahasiswa. 
+5. Buat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan 
+membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing 
+memiliki cara tersendiri untuk mengelola pengajuan jurnal. 
+```
+<?php
+// 1. Implementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa.
 
-### Mengimplementasikan kelas Person sebagai induk dari Dosen dan Mahasiswa.
-  ![Screenshot 2024-09-10 193658](https://github.com/user-attachments/assets/8787575f-2645-4804-8fa9-958323837a10)
+// Class induk Person
+class Person {
+    public $name;
 
-Penjelasan 
-- Person adalah kelas induk yang mendefinisikan atribut name dan memiliki metode getName().
-- Kelas ini memiliki konstruktor (__construct()) yang menerima parameter name dan menyimpan nilainya dalam atribut $name.
-- Metode getName() digunakan untuk mengembalikan nilai dari atribut name.
-#### Mengggunakan konsep Inheritance untuk membuat hierarki kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang sesuai dengan perannya. Kemudian menggunakan Encapsulation untuk melindungi atribut nidn di kelas Dosen dan nim di kelas Mahasiswa. Menerapkan Polymorphism dengan membuat metode getRole() di kelas Person dan override metode ini di kelas Dosen dan Mahasiswa untuk menampilkan peran yang berbeda. 
-  ![Screenshot 2024-09-10 194748](https://github.com/user-attachments/assets/890c6627-ddae-4545-816b-e1861f16abd1)
+    public function getName() {
+        return $this->name;
+    }
 
-  Penjelasan
-- Kelas ini adalah subclass dari Person, mewarisi atribut dan metode dari Person.
-- Atribut $nidn di-enkapsulasi menggunakan visibilitas private, sehingga hanya 
-  bisa diakses melalui metode getter (getNidn()) dan setter (setNidn()).
-- Konstruktor Dosen menggunakan parent::__construct($name) untuk memanggil 
-  konstruktor kelas Person, dan juga menyimpan nilai $nidn.
-  
-  ![Screenshot 2024-09-10 194805](https://github.com/user-attachments/assets/ffae2b56-80b9-401e-a420-23edc4cc50b9)
+    public function setName($name) {
+        $this->name = $name;
+    }
+}
 
-  Penjelasan
-  
-- Mirip dengan Dosen, kelas ini juga adalah subclass dari Person dengan atribut 
-  pribadi $nim, dan metode getter dan setter.
-- Menggunakan metode getRole() untuk mengembalikan nilai "Mahasiswa", yang 
-  menunjukkan penggunaan polymorphism.
-### Membuat kelas abstrak Jurnal dan implementasikan konsep Abstraction dengan membuat kelas turunan JurnalDosen dan JurnalMahasiswa yang masing-masing memiliki cara tersendiri untuk mengelola pengajuan jurnal.
-  ![Screenshot 2024-09-10 202255](https://github.com/user-attachments/assets/64d658cd-d431-46d9-bf08-96c534fa4758)
-  
-  Penjelasan 
-  
-- Jurnal adalah kelas abstrak, artinya tidak dapat diinstansiasi secara langsung. Kelas ini hanya digunakan sebagai dasar untuk subclass 
-  lainnya (JurnalDosen dan JurnalMahasiswa).
-- Kelas ini memiliki satu metode abstrak submit() yang harus diimplementasikan oleh setiap subclass.
-- Class Dosen Kelas ini adalah turunan dari Jurnal dan mengimplementasikan metode submit() untuk menampilkan pesan bahwa jurnal dosen telah diajukan.
-- JurnalMahasiswa Serupa dengan JurnalDosen, tetapi implementasi submit() menampilkan pesan untuk jurnal mahasiswa.
+/* 2. Gunakan konsep Inheritance untuk membuat hierarki 
+kelas yang memungkinkan Dosen dan Mahasiswa memiliki atribut dan metode yang 
+sesuai dengan perannya.
+*/
+class Dosen extends Person {
+    private $nidn;
 
+    // Metode getRole()
+    public function getRole() {
+        return "Dosen";
+    }
+
+    public function getNidn() {
+        return $this->nidn;
+    }
+
+    public function setNidn($nidn) {
+        $this->nidn = $nidn;
+    }
+}
+
+class Mahasiswa extends Person {
+    private $nim;
+
+    // Metode getRole()
+    public function getRole() {
+        return "Mahasiswa";
+    }
+
+    public function getNim() {
+        return $this->nim;
+    }
+
+    public function setNim($nim) {
+        $this->nim = $nim;
+    }
+}
+
+/* 5. Buat kelas abstrak Jurnal dan implementasikan 
+konsep Abstraction dengan
+membuat kelas turunan JurnalDosen dan 
+JurnalMahasiswa yang masing-masing
+memiliki cara tersendiri untuk mengelola pengajuan 
+jurnal.
+*/
+abstract class Jurnal {
+    protected $title;
+
+    public function setTitle($title) {
+        $this->title = $title;
+    }
+
+    abstract public function submit();
+}
+
+class JurnalDosen extends Jurnal {
+    public function submit() {
+        echo "Jurnal Dosen '{$this->title}' telah diajukan.<br>";
+    }
+}
+
+class JurnalMahasiswa extends Jurnal {
+    public function submit() {
+        echo "Jurnal Mahasiswa '{$this->title}' telah diajukan.<br>";
+    }
+}
+```
+Penjelasan
+
+1. Kelas Person
+- Deskripsi: Kelas ini adalah kelas dasar (superclass) yang menyimpan atribut dan metode umum yang dimiliki oleh semua orang (seperti Dosen dan Mahasiswa).
+- Atribut:
+public $name: Atribut untuk menyimpan nama orang.
+- Metode:
+    - public function getName(): Mengembalikan nilai dari atribut name.
+    - public function setName($name): Mengatur nilai dari atribut name.
+2. Kelas Dosen dan Mahasiswa (Inheritance)
+- Inheritance: Kelas Dosen dan Mahasiswa mewarisi dari Person, sehingga mereka memiliki atribut dan metode dari kelas Person.
+
+
+Kelas Dosen
+- Atribut Tambahan:
+    - private $nidn: Atribut untuk menyimpan Nomor Induk Dosen Nasional (NIDN).
+- Metode:
+    - public function getRole(): Mengembalikan string "Dosen", yang menunjukkan peran sebagai dosen.
+    - public function getNidn(): Mengembalikan nilai dari atribut nidn.
+    - public function setNidn($nidn): Mengatur nilai dari atribut nidn.
+
+Kelas Mahasiswa
+- Atribut Tambahan:
+    - private $nim: Atribut untuk menyimpan Nomor Induk Mahasiswa (NIM).
+- Metode:
+    - public function getRole(): Mengembalikan string "Mahasiswa", yang menunjukkan peran sebagai mahasiswa.
+    - public function getNim(): Mengembalikan nilai dari atribut nim.
+    - public function setNim($nim): Mengatur nilai dari atribut nim.
+      
+3. Kelas Abstrak Jurnal
+Deskripsi: Kelas abstrak ini digunakan untuk mendefinisikan struktur dasar untuk kelas jurnal, yang akan diimplementasikan oleh kelas-kelas turunan.
+
+- Atribut:
+    - protected $title: Atribut untuk menyimpan judul jurnal. Atribut ini hanya bisa diakses oleh kelas itu sendiri dan kelas turunannya.
+- Metode:
+    - public function setTitle($title): Mengatur nilai dari atribut title.
+    - abstract public function submit(): Metode abstrak yang harus diimplementasikan oleh kelas turunannya. Metode ini tidak memiliki implementasi di kelas abstrak dan harus didefinisikan di kelas konkret.
+4. Kelas Turunan dari Jurnal
+Kelas JurnalDosen
+- Metode:
+    - public function submit(): Mengimplementasikan metode submit() dari kelas abstrak Jurnal. Menampilkan pesan yang menunjukkan bahwa jurnal dosen telah diajukan.
+      
+Kelas JurnalMahasiswa
+- Metode:
+    - public function submit(): Mengimplementasikan metode submit() dari kelas abstrak Jurnal. Menampilkan pesan yang menunjukkan bahwa jurnal mahasiswa telah diajukan.
   ### Instanisiasi
-  ![Screenshot 2024-09-10 202309](https://github.com/user-attachments/assets/dd169d04-e159-4140-98a0-27cea1c2d369)
+```
+// Instansiasi
+// Membuat objek Dosen
+$dosen = new Dosen();
+$dosen->setName("Ana Febri S");
+$dosen->setNidn("12345678");
+echo $dosen->getName() . " adalah " . $dosen->getRole() . " dengan NIDN: " . $dosen->getNidn() . "<br>";
+
+// Membuat objek Mahasiswa
+$mahasiswa = new Mahasiswa();
+$mahasiswa->setName("Yana Aprilia");
+$mahasiswa->setNim("2019234567");
+echo $mahasiswa->getName() . " adalah " . $mahasiswa->getRole() . " dengan NIM: " . $mahasiswa->getNim() . "<br>";
+
+// Mengelola jurnal dosen
+$jurnalDosen = new JurnalDosen();
+$jurnalDosen->setTitle("Penelitian AI");
+$jurnalDosen->submit();
+
+// Mengelola jurnal mahasiswa
+$jurnalMahasiswa = new JurnalMahasiswa();
+$jurnalMahasiswa->setTitle("Skripsi Data Mining");
+$jurnalMahasiswa->submit();
+?>
+```
 
   ### Output
   ![Screenshot 2024-09-10 202324](https://github.com/user-attachments/assets/7752dffc-1619-43e7-9476-734eea08dedd)
