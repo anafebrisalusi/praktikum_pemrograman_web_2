@@ -1,14 +1,8 @@
 <?php
 // 5. Abstraction
-
 // Membuat class abstrak Pengguna
 abstract class Pengguna {
     public $nama;
-
-    // Constructor (Menginisialisasi class yang baru)
-    public function __construct($nama) {
-        $this->nama = $nama;
-    }
 
     // Metode abstrak aksesFitur() yang harus diimplementasikan di subclass
     abstract public function aksesFitur();
@@ -16,12 +10,7 @@ abstract class Pengguna {
 
 // Membuat class Dosen yang mengimplementasikan class abstrak Pengguna
 class Dosen extends Pengguna {
-    private $mataKuliah;
-
-    public function __construct($nama, $mataKuliah) {
-        parent::__construct($nama); // Memanggil constructor dari class Pengguna
-        $this->mataKuliah = $mataKuliah;
-    }
+    public $mataKuliah;
 
     // Implementasi metode abstrak aksesFitur() untuk Dosen
     public function aksesFitur() {
@@ -31,14 +20,8 @@ class Dosen extends Pengguna {
 
 // Membuat class Mahasiswa yang mengimplementasikan class abstrak Pengguna
 class Mahasiswa extends Pengguna {
-    private $nim;
-    private $jurusan;
-
-    public function __construct($nama, $nim, $jurusan) {
-        parent::__construct($nama); // Memanggil constructor dari class Pengguna
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
+    public $nim;
+    public $jurusan;
 
     // Implementasi metode abstrak aksesFitur() untuk Mahasiswa
     public function aksesFitur() {
@@ -46,12 +29,17 @@ class Mahasiswa extends Pengguna {
     }
 }
 
-// Instansiasi objek dari class Dosen dan Mahasiswa
-$dosen = new Dosen("Yana Aprilia", "Filsafat");
-$mahasiswa = new Mahasiswa("Ana Febri Salusi", "230202027", "Jurusan Komputer dan Bisnis");
+// Instansiasi objek dari class Dosen dan Mahasiswa tanpa constructor
+$dosen = new Dosen();
+$dosen->nama = "Yana Aprilia";
+$dosen->mataKuliah = "Filsafat";
+
+$mahasiswa = new Mahasiswa();
+$mahasiswa->nama = "Ana Febri Salusi";
+$mahasiswa->nim = "230202027";
+$mahasiswa->jurusan = "Jurusan Komputer dan Bisnis";
 
 // Memanggil metode aksesFitur() dari masing-masing objek
-echo $dosen->aksesFitur() . "<br>";      // Output: Nama Dosen: Aprilia, Mata Kuliah: Filsafat
+echo $dosen->aksesFitur() . "<br>";      // Output: Nama Dosen: Yana Aprilia, Mata Kuliah: Filsafat
 echo $mahasiswa->aksesFitur() . "<br>";  // Output: Nama Mahasiswa: Ana Febri Salusi, NIM: 230202027, Jurusan: Komputer dan Bisnis
-
 ?>
