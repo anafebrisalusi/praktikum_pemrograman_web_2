@@ -204,11 +204,6 @@ d. Instansiasi dan Penggunaan:
 class Pengguna {
     public $nama;
 
-    // Constructor (Menginisialisasi class yang baru)
-    public function __construct($nama) {
-        $this->nama = $nama;
-    }
-
     // Metode aksesFitur() umum untuk Pengguna
     public function aksesFitur() {
         return $this->nama;
@@ -217,12 +212,7 @@ class Pengguna {
 
 // Membuat class Dosen yang mewarisi class Pengguna
 class Dosen extends Pengguna {
-    private $mataKuliah;
-
-    public function __construct($nama, $mataKuliah) {
-        parent::__construct($nama); // Memanggil constructor dari class Pengguna
-        $this->mataKuliah = $mataKuliah;
-    }
+    public $mataKuliah;
 
     // aksesFitur() untuk Dosen
     public function aksesFitur() {
@@ -232,13 +222,8 @@ class Dosen extends Pengguna {
 
 // Membuat class Mahasiswa yang mewarisi class Pengguna
 class Mahasiswa extends Pengguna {
-    private $jurusan;
-
-    public function __construct($nama, $nim, $jurusan) {
-        parent::__construct($nama); // Memanggil constructor dari class Pengguna
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
-    }
+    public $nim;
+    public $jurusan;
 
     // aksesFitur() untuk Mahasiswa
     public function aksesFitur() {
@@ -247,27 +232,28 @@ class Mahasiswa extends Pengguna {
 }
 
 // Instansiasi objek dari class Dosen dan Mahasiswa
-$dosen = new Dosen("Yana Aprilia ", "Filsafat ");
-$mahasiswa = new Mahasiswa("Ana Febri Salusi ", "230202027 ", "Teknik Informatika");
+$dosen = new Dosen();
+$dosen->nama = "Yana Aprilia";
+$dosen->mataKuliah = "Filsafat";
+
+$mahasiswa = new Mahasiswa();
+$mahasiswa->nama = "Ana Febri Salusi";
+$mahasiswa->nim = "230202027";
+$mahasiswa->jurusan = "Teknik Informatika";
 
 // Memanggil metode aksesFitur() dari masing-masing objek
 echo $dosen->aksesFitur() . "<br>";      // Output: Nama Dosen: Yana Aprilia, Mata Kuliah: Filsafat
-echo $mahasiswa->aksesFitur() . "<br>";  // Output: Nama Mahasiswa: Ana Febri Salusi, Jurusan: Teknik Informatika
+echo $mahasiswa->aksesFitur() . "<br>";  // Output: Nama Mahasiswa: Ana Febri Salusi, NIM: 230202027, Jurusan: Teknik Informatika
 
 ?>
 
 ```
 
    Penjelasan
-   - Kelas Pengguna punya atribut nama dan metode aksesFitur(), yang pada dasarnya hanya menampilkan nama pengguna.
-   - Kelas Dosen adalah turunan dari Pengguna dan menambahkan atribut baru mataKuliah.
-   - Metode aksesFitur() di-override sehingga menampilkan nama dosen dan mata kuliah yang diajarkan.
-   - Kelas Mahasiswa juga turunan dari Pengguna, tetapi memiliki atribut tambahan yaitu nim dan jurusan.
-Seperti pada kelas Dosen, metode aksesFitur() di-override untuk menampilkan nama mahasiswa, NIM, dan jurusan.
-   - Instansiasi Objek:
-     Membuat dua objek, satu dari kelas Dosen dan satu dari kelas Mahasiswa.
-Kemudian kita memanggil metode aksesFitur() untuk masing-masing objek, yang akan menampilkan informasi sesuai dengan peran masing-masing.
-
+- Kelas Pengguna: Kelas dasar dengan atribut nama dan metode aksesFitur() yang mengembalikan nama pengguna.
+- Kelas Dosen: Mewarisi dari Pengguna dan menambahkan atribut mataKuliah. Metode aksesFitur() di-override untuk menampilkan nama dosen dan mata kuliah.
+- Kelas Mahasiswa: Juga mewarisi dari Pengguna dengan atribut tambahan nim dan jurusan. Metode aksesFitur() di-override untuk menampilkan nama mahasiswa, NIM, dan jurusan.
+  
 Outputnya adalah sebagai berikut:
 
 ![Screenshot 2024-09-10 215347](https://github.com/user-attachments/assets/ceddbdf1-209e-4971-8cf6-5fa342be9ba7)
@@ -276,18 +262,63 @@ Outputnya adalah sebagai berikut:
  * Buat class abstrak Pengguna dengan metode abstrak aksesFitur().
  * Implementasikan class Mahasiswa dan Dosen yang mengimplementasikan metode abstrak tersebut.
  * Demonstrasikan dengan memanggil metode aksesFitur() dari objek yang diinstansiasi.
-   ![Screenshot 2024-09-10 074945](https://github.com/user-attachments/assets/b9f83bbb-ef40-4b8f-a7ea-8745d8b1b259)
-   ![Screenshot 2024-09-10 075015](https://github.com/user-attachments/assets/2c36b370-2132-4915-99b2-fb64af11f1fb)
-   
+```
+<?php
+// 5. Abstraction
+// Membuat class abstrak Pengguna
+abstract class Pengguna {
+    public $nama;
+
+    // Metode abstrak aksesFitur() yang harus diimplementasikan di subclass
+    abstract public function aksesFitur();
+}
+
+// Membuat class Dosen yang mengimplementasikan class abstrak Pengguna
+class Dosen extends Pengguna {
+    public $mataKuliah;
+
+    // Implementasi metode abstrak aksesFitur() untuk Dosen
+    public function aksesFitur() {
+        return "Nama Dosen: {$this->nama}<br> Mata Kuliah: {$this->mataKuliah}<br>";
+    }
+}
+
+// Membuat class Mahasiswa yang mengimplementasikan class abstrak Pengguna
+class Mahasiswa extends Pengguna {
+    public $nim;
+    public $jurusan;
+
+    // Implementasi metode abstrak aksesFitur() untuk Mahasiswa
+    public function aksesFitur() {
+        return "Nama Mahasiswa: {$this->nama}<br> NIM: {$this->nim}<br> Jurusan: {$this->jurusan}<br>";
+    }
+}
+
+// Instansiasi objek dari class Dosen dan Mahasiswa
+$dosen = new Dosen();
+$dosen->nama = "Yana Aprilia";
+$dosen->mataKuliah = "Filsafat";
+
+$mahasiswa = new Mahasiswa();
+$mahasiswa->nama = "Ana Febri Salusi";
+$mahasiswa->nim = "230202027";
+$mahasiswa->jurusan = "Jurusan Komputer dan Bisnis";
+
+// Memanggil metode aksesFitur() dari masing-masing objek
+echo $dosen->aksesFitur() . "<br>";      // Output: Nama Dosen: Yana Aprilia, Mata Kuliah: Filsafat
+echo $mahasiswa->aksesFitur() . "<br>";  // Output: Nama Mahasiswa: Ana Febri Salusi, NIM: 230202027, Jurusan: Komputer dan Bisnis
+?>
+```
+  
 
    Penjelasan
 
-  - Kelas Pengguna adalah kelas yang tidak bisa dibuat objek langsung, karena metode aksesFitur() didefinisikan sebagai abstrak. Artinya, kelas turunan wajib mengimplementasikan metode ini.
-Kelas ini hanya punya atribut umum, yaitu nama, dan konstruktor untuk menginisialisasi atribut tersebut.
-  - Kelas Dosen adalah turunan dari kelas abstrak Pengguna dan menambahkan atribut khusus, yaitu mataKuliah.
-Kelas ini juga mengimplementasikan metode aksesFitur() untuk menampilkan data dosen, yaitu nama dan mata kuliah yang diajarkan.
-- Kelas Mahasiswa sama seperti Dosen, kelas ini juga merupakan turunan dari Pengguna, tetapi dengan atribut khusus nim dan jurusan.
-Kelas ini juga mengimplementasikan metode aksesFitur() untuk menampilkan data mahasiswa, termasuk NIM dan jurusan.
+  - Kelas abstrak Pengguna: Merupakan kelas dasar yang memiliki atribut umum nama dan metode abstrak aksesFitur(). Kelas abstrak tidak bisa diinstansiasi langsung dan memaksa subclass untuk mengimplementasikan metode abstrak tersebut.
+
+- Kelas Dosen dan Mahasiswa: Mewarisi dari kelas abstrak Pengguna dan memberikan implementasi spesifik untuk metode aksesFitur().
+  - Dosen: Menampilkan nama dosen dan mata kuliah.
+  - Mahasiswa: Menampilkan nama mahasiswa, NIM, dan jurusan.
+- Instansiasi dan Pemanggilan Metode: Objek Dosen dan Mahasiswa diinstansiasi, atribut diatur, lalu metode aksesFitur() dipanggil untuk menampilkan informasi masing-masing.
  Outputnya adalah sebagai berikut:
 
 ![Screenshot 2024-09-10 215359](https://github.com/user-attachments/assets/26083e25-8ba7-4f19-8d0c-2eaf20ed371e)
