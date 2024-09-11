@@ -131,10 +131,9 @@ Lalu, kita menggunakan metode setter untuk mengisi nilai atribut seperti nama, N
 - Menampilkan Data:
 Terakhir, kita memanggil metode tampilkanData() untuk menampilkan informasi mahasiswa yang sudah diisi menggunakan setter.
 
-     Outputnya adalah sebagai berikut:
+   Outputnya adalah sebagai berikut:
 
-     ![Screenshot 2024-09-10 213411](https://github.com/user-attachments/assets/bda0d955-837e-4cbb-a79b-19cd026cc4c2)
-
+    ![Screenshot 2024-09-11 184542](https://github.com/user-attachments/assets/48d33f05-61d9-45d5-adfa-a9571dcd1533)
      
 3. Inheritance
  * Buat class Pengguna dengan atribut nama dan metode getNama().
