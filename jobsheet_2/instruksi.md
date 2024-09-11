@@ -13,7 +13,8 @@ Kelas Mahasiswa memiliki tiga atribut atau variabel: nama, nim, dan jurusan. Ini
     
     Outputnya adalah sebagai berikut:
     
-    ![Screenshot 2024-09-10 221643](https://github.com/user-attachments/assets/e989781d-775c-41f4-954f-49e817ddda9b)
+   ![Screenshot 2024-09-11 202613](https://github.com/user-attachments/assets/b4b8e991-f9e9-4bf7-98c9-2f06c8c644df)
+
     
 2. Implementasi Constructor
 - Tambahkan constructor pada kelas Mahasiswa yang akan menginisialisasi
