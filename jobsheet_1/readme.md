@@ -169,21 +169,27 @@ echo $dosen1->getDataDosen();
 ?>
 ```
    Penjelasan
+   
 a. Kelas Pengguna:
 - Atribut nama: Ini adalah variabel publik yang menyimpan nama pengguna.
 - Metode getNama(): Metode ini mengembalikan nilai dari atribut nama. Dengan kata lain, metode ini digunakan untuk mengambil nama pengguna.
+  
 b. Kelas Dosen:
 - Pewarisan: Kelas Dosen mewarisi dari kelas Pengguna dengan menggunakan keyword extends. Ini berarti bahwa kelas Dosen akan memiliki semua atribut dan metode dari kelas Pengguna.
 - Atribut mataKuliah: Ini adalah variabel publik baru yang ditambahkan di kelas Dosen untuk menyimpan informasi tentang mata kuliah yang diajarkan oleh dosen.
+  
 c. Metode getDataDosen(): Metode ini mengembalikan string yang berisi nama dosen (menggunakan metode getNama() dari kelas Pengguna) dan mata kuliah yang diajarkan.
+
 d. Instansiasi dan Penggunaan:
 - Membuat Objek Dosen: new Dosen() membuat objek baru dari kelas Dosen.
-Menetapkan Atribut:
-$dosen1->nama = "Dr. Budi"; menetapkan nama dosen ke "Dr. Budi".
-$dosen1->mataKuliah = "Pemrograman PHP"; menetapkan mata kuliah yang diajarkan dosen ke "Pemrograman PHP".
+- Menetapkan Atribut:
+  - $dosen1->nama = "Dr. Budi"; menetapkan nama dosen ke "Dr. Budi".
+  - $dosen1->mataKuliah = "Pemrograman PHP"; menetapkan mata kuliah yang diajarkan dosen ke "Pemrograman PHP".
+    
      Outputnya adalah sebagai berikut:
 
-     ![Screenshot 2024-09-10 215234](https://github.com/user-attachments/assets/769a582a-6827-418e-bf0a-5a991de850ae)
+     ![Screenshot 2024-09-11 192828](https://github.com/user-attachments/assets/81343070-0a64-4b3d-92cc-0d0444d50ca1)
+
 
 
 4. Polymorphism
