@@ -1,40 +1,57 @@
 <?php
-//2. Encapsulation
-//membuat class Mahasiswa
+// Membuat class Mahasiswa dengan atribut private
 class Mahasiswa {
-    //mengubah atribut nama, nim, dan jurusan menjadi akses privat
+    // Atribut private
     private $nama;
     private $nim;
     private $jurusan;
 
-    //inisilasi
-    public function __construct($nama, $nim, $jurusan) {
+    // Setter untuk atribut nama
+    public function setNama($nama) {
         $this->nama = $nama;
+    }
+
+    // Getter untuk atribut nama
+    public function getNama() {
+        return $this->nama;
+    }
+
+    // Setter untuk atribut nim
+    public function setNim($nim) {
         $this->nim = $nim;
+    }
+
+    // Getter untuk atribut nim
+    public function getNim() {
+        return $this->nim;
+    }
+
+    // Setter untuk atribut jurusan
+    public function setJurusan($jurusan) {
         $this->jurusan = $jurusan;
     }
 
-    //metode getter
-    public function getMahasiswa() {
-        return "Nama: ". $this->nama. "<br> NIM: ". $this->nim. "<br> Jurusan: ". $this->jurusan. "<br>";
+    // Getter untuk atribut jurusan
+    public function getJurusan() {
+        return $this->jurusan;
     }
-    
-    //metode setter
-    public function setMahasiswa($nama, $nim, $jurusan) {
-        $this->nama = $nama;
-        $this->nim = $nim;
-        $this->jurusan = $jurusan;
+
+    // Metode untuk menampilkan data mahasiswa
+    public function tampilkanData() {
+        return "Nama: " . $this->getNama() . "<br>" .
+               "NIM: " . $this->getNim() . "<br>" .
+               "Jurusan: " . $this->getJurusan() . "<br>";
     }
 }
 
-//instansiasi
-$mahasiswa1 = new Mahasiswa("Ana Febri Salusi", "230202027", "Jurusan Komputer dan Bisnis");
+// Instansiasi objek dari class Mahasiswa
+$mahasiswa1 = new Mahasiswa();
 
-//output metode getter
-echo $mahasiswa1->getMahasiswa()."<br>"; 
+// Menggunakan setter untuk mengisi nilai atribut
+$mahasiswa1->setNama("Ana Febri Salusi");
+$mahasiswa1->setNim("230202027");
+$mahasiswa1->setJurusan("Teknik Informatika");
 
-$mahasiswa1->setMahasiswa("Yana Aprilia", "230202047", "Jurusan Komputer dan Bisnis");
-
-//output metode setter
-echo $mahasiswa1->getMahasiswa();  
+// Menampilkan data menggunakan metode tampilkanData()
+echo $mahasiswa1->tampilkanData();
 ?>
